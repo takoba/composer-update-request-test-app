@@ -1,0 +1,12 @@
+version: '3'
+services:
+  update:
+    container_name: local-composer-update-request-test-app
+    build:
+      context: .
+      args:
+        - GITHUB_TOKEN=$GITHUB_ACCESS_TOKEN
+    volumes:
+      - .:/github/workspace
+    command:
+      composer global require o0h/composer-update-request:dev-fix-resolving-why
