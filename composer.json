@@ -7,6 +7,12 @@
             "email": "plane25@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/takoba/composer-update-request"
+        }
+    ],
     "require": {
         "aws/aws-sdk-php": "@dev",
         "google/apiclient": "@dev",
