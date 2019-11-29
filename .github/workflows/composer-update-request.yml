@@ -22,7 +22,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: takoba
           GITHUB_REPOSITORY: takoba/composer-update-request-test-app
-        run: composer global require o0h/composer-update-request:dev-fix-resolving-why
+        run: |
+          composer global config repositories.composer-update-request vcs https://github.com/takoba/composer-update-request
+          composer global require o0h/composer-update-request:dev-fix-resolving-why
 
       - name: update composer.lock
         uses: nick-zh/composer@v0.2.0
