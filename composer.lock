@@ -474,20 +474,20 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.0.0-beta1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "0ad73a526f4b5e67312e94fb7f60c1bdefc284b9"
+                "reference": "11fb4f92702f98577c95c8ea1e61b937f8f70859"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/0ad73a526f4b5e67312e94fb7f60c1bdefc284b9",
-                "reference": "0ad73a526f4b5e67312e94fb7f60c1bdefc284b9",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/11fb4f92702f98577c95c8ea1e61b937f8f70859",
+                "reference": "11fb4f92702f98577c95c8ea1e61b937f8f70859",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1",
+                "php": "^7.2",
                 "psr/log": "^1.0.1"
             },
             "provide": {
@@ -502,11 +502,10 @@
                 "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
                 "phpspec/prophecy": "^1.6.1",
-                "phpunit/phpunit": "^7.3",
+                "phpunit/phpunit": "^8.3",
                 "predis/predis": "^1.1",
                 "rollbar/rollbar": "^1.3",
                 "ruflin/elastica": ">=0.90 <3.0",
-                "sentry/sentry": "^1.9",
                 "swiftmailer/swiftmailer": "^5.3|^6.0"
             },
             "suggest": {
@@ -514,14 +513,14 @@
                 "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
                 "elasticsearch/elasticsearch": "Allow sending log messages to an Elasticsearch server via official client",
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mbstring": "Allow to work properly with unicode symbols",
                 "ext-mongodb": "Allow sending log messages to a MongoDB server (via driver)",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
                 "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
                 "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
-                "sentry/sentry": "Allow sending log messages to a Sentry server"
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
@@ -552,7 +551,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2018-12-08T17:16:32+00:00"
+            "time": "2019-11-15T14:56:08+00:00"
         },
         {
             "name": "mtdowling/jmespath.php",
