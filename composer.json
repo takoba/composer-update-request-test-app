@@ -7,5 +7,9 @@
             "email": "plane25@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "aws/aws-sdk-php": "@dev",
+        "google/apiclient": "@dev",
+        "monolog/monolog": "@dev"
+    }
 }
