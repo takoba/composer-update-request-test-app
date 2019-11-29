@@ -18,14 +18,11 @@ jobs:
         run: composer -V
 
       - name: require composer-update-request package
-        uses: nick-zh/composer@v0.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: takoba
           GITHUB_REPOSITORY: takoba/composer-update-request-test-app
-        with:
-          action: global
-          options: require o0h/composer-update-request:dev-fix-resolving-why
+        run: composer global require o0h/composer-update-request:dev-fix-resolving-why
 
       - name: update composer.lock
         uses: nick-zh/composer@v0.2.0
