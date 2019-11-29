@@ -1,0 +1,33 @@
+name: composer-update-request
+
+on:
+  schedule:
+    - cron: '* * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: takoba
+          GITHUB_REPOSITORY: takoba/composer-update-request-test-app
+
+      - uses: actions/checkout@v1
+
+      - name: Setup PHP Action
+        uses: shivammathur/setup-php@1.5.5
+        with:
+          php-version: 7.4
+      - name: check composer's version
+        run: composer -V
+
+      - name: require composer-update-request package
+        uses: nick-zh/composer@v0.2.0
+        with:
+          action: "global require o0h/composer-update-request:dev-fix-resolving-why"
+
+      - name: update composer.lock
+        uses: nick-zh/composer@v0.2.0
+        with:
+          action: update
