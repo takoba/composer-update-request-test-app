@@ -17,7 +17,7 @@ jobs:
       - name: check composer's version
         run: composer -V
 
-      - name: require composer-update-request package
+      - name: require composer-update-request package & update composer.lock
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: takoba
@@ -25,8 +25,4 @@ jobs:
         run: |
           composer global config repositories.composer-update-request vcs https://github.com/takoba/composer-update-request
           composer global require o0h/composer-update-request:dev-fix-resolving-why
-
-      - name: update composer.lock
-        uses: nick-zh/composer@v0.2.0
-        with:
-          action: update
+          composer update
