@@ -1,0 +1,11 @@
+{
+    "name": "takoba/composer-update-request-test-app",
+    "type": "project",
+    "authors": [
+        {
+            "name": "takoba",
+            "email": "plane25@gmail.com"
+        }
+    ],
+    "require": {}
+}
