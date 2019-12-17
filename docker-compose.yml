@@ -6,9 +6,11 @@ services:
       context: .
       args:
         - GITHUB_TOKEN=$GITHUB_ACCESS_TOKEN
-        - GITHUB_USER=takoba
-        - GITHUB_REPOSITORY=takoba/composer-update-request-test-app
     volumes:
       - .:/github/workspace
+    environment:
+      - GITHUB_TOKEN=$GITHUB_ACCESS_TOKEN
+      - GITHUB_USER=takoba
+      - GITHUB_REPOSITORY=takoba/composer-update-request-test-app
     command:
       bash -c "composer global require o0h/composer-update-request:dev-fix-resolving-why && composer update"
