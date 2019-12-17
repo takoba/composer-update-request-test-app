@@ -2,6 +2,8 @@ FROM nickzurich/composer-prestissimo:latest
 
 COPY . /github/workspace
 
+RUN composer self-update
+
 WORKDIR /github/workspace
 ARG GITHUB_TOKEN
 RUN git config --global user.name "takoba/composer-update-request-test-app/local" && \
