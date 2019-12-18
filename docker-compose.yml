@@ -13,4 +13,4 @@ services:
       - GITHUB_USER=takoba
       - GITHUB_REPOSITORY=takoba/composer-update-request-test-app
     command:
-      bash -c "composer global require o0h/composer-update-request:dev-fix-resolving-why && composer update"
+      bash -c "composer global require o0h/composer-update-request:dev-master && composer update"
