@@ -5,11 +5,11 @@ services:
     build:
       context: .
       args:
-        - GITHUB_TOKEN=$GITHUB_ACCESS_TOKEN
+        - GITHUB_TOKEN=$GITHUB_TOKEN
     volumes:
       - .:/github/workspace
     environment:
-      - GITHUB_TOKEN=$GITHUB_ACCESS_TOKEN
+      - GITHUB_TOKEN
       - GITHUB_USER=takoba
       - GITHUB_REPOSITORY=takoba/composer-update-request-test-app
     command:
