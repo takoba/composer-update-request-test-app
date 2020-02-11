@@ -26,5 +26,5 @@ jobs:
           git config --global user.name "o0h/composer-update-request"
           git config --global user.email "plane25+takoba-composer-update-request-test-app@gmail.com"
           composer global config repositories.composer-update-request vcs https://github.com/takoba/composer-update-request
-          composer global require o0h/composer-update-request:dev-fix-resolving-why
+          composer global require o0h/composer-update-request:dev-master
           composer update
